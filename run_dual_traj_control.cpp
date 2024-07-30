@@ -17,7 +17,7 @@ typedef boost::shared_ptr<gripper_control_client> gripper_control_client_Ptr;
 // Create a ROS action client to move TIAGO's torso
 void createTorsoClient(torso_control_client_Ptr& torso_action_client, const std::string torso_controller_name)
 {
-  ROS_INFO("Creating action client to %s ...", torso_controller_name.c_str());
+  ROS_INFO("Creating action client to control the torso, called: %s ...", torso_controller_name.c_str());
 
   std::string torso_action_client_name = "/" + torso_controller_name + "/follow_joint_trajectory";
   torso_action_client.reset( new torso_control_client(torso_action_client_name) );
@@ -39,7 +39,7 @@ void createTorsoClient(torso_control_client_Ptr& torso_action_client, const std:
 // Create a ROS action client to move TIAGo's arm
 void createArmClient(arm_control_client_Ptr& action_client, const std::string arm_controller_name)
 {
-  ROS_INFO("Creating action client to %s ...", arm_controller_name.c_str());
+  ROS_INFO("Creating action client to control the one arm called: %s ...", arm_controller_name.c_str());
 
   std::string action_client_name = "/" + arm_controller_name + "/follow_joint_trajectory";
   action_client.reset( new arm_control_client(action_client_name) );
