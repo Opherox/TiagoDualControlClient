@@ -6,3 +6,9 @@ It has been created downloading the docker image of the official robot from Pal 
 Code action client: Beware of the time to reach a waypoint, if no increment is done, it can give an error about the trajectory. 
 
 Download zip, unpack it, source the docker setup.bash so that you have catkin. Then enter the workspace (tiago_movement_ws) and do catkin_make
+sudo rosdep init
+sudo rosdep update
+rosrun tiago_movement move_tiago
+Connect to the real robot: 
+export ROS_MASTER_URI=http://<robot_ip>:11311
+export ROS_IP=<computer_ip>
