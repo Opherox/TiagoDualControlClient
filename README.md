@@ -13,6 +13,8 @@ sudo rosdep update
 
 rosrun tiago_movement move_tiago
 
+check dependencies: rospack depends1 tiago_movement 
+
 Connect to the real robot:
 
 export ROS_MASTER_URI=http://<robot_ip>:11311
