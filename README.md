@@ -13,7 +13,7 @@ Code action client: Beware of the time to reach a waypoint, if no increment is d
 6. sudo rosdep init
 7. sudo rosdep update
 8. rospack depends1 tiago_movement  //check dependencies
-9. rosrun tiago_movement move_tiago
+9. rosrun tiago_movement move_tiago  //whenever connected to the robot or simulation is running
 
 Connect to the real robot:
 
