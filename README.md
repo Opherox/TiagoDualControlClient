@@ -22,3 +22,5 @@ export ROS_MASTER_URI=http://<robot_ip>:11311
 export ROS_IP=<computer_ip>
 
 rosrun tiago_movement move_tiago
+
+For some reason, I cant do rostopic echo /tf and it showing the information, but if I do ssh to the robot it does. That might have to do with the robot not doing what this code is supposed to make him do.
