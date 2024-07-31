@@ -20,3 +20,5 @@ Connect to the real robot:
 export ROS_MASTER_URI=http://<robot_ip>:11311
 
 export ROS_IP=<computer_ip>
+
+rosrun tiago_movement move_tiago
