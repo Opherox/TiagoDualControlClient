@@ -39,3 +39,6 @@ eProsima/Fast-DDS:
     url: https://github.com/eProsima/Fast-DDS.git
     version: 2.1.x  //to: version: 2.1.4 will fix the error
 If any other branch with the version name is missing, it will fail for the same reason.
+
+After saving the docker with docker save ros2_bridge_tiago > ros2_bridge_tiago.tar.gz , you should get a 8.8GB file
+
