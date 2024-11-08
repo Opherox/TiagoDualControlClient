@@ -38,3 +38,4 @@ eProsima/Fast-DDS:
     type: git
     url: https://github.com/eProsima/Fast-DDS.git
     version: 2.1.x  //to: version: 2.1.4 will fix the error
+If any other branch with the version name is missing, it will fail for the same reason.
