@@ -41,4 +41,6 @@ eProsima/Fast-DDS:
 If any other branch with the version name is missing, it will fail for the same reason.
 
 After saving the docker with docker save ros2_bridge_tiago > ros2_bridge_tiago.tar.gz , you should get a 8.8GB file
-
+Move the tar.gz inside Tiago and load it with: docker load < ros2_bridge_tiago.tar.gz
+Execute the image with: sudo docker run -h bridge --network=host --add-host <tiago-hostname>:<tiago-ip> -it -e ROS_MASTER_URI=http://<tiago-hostname>:11311/ [4] -e ROS_IP= ros2_bridge_tiago bash -c "ros2 launch ros1_bridge dedicated_bridges_launch.py" 
+Put the IP and such corresponding with your robot.
