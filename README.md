@@ -25,3 +25,14 @@ rosrun tiago_movement move_tiago
 
 For some reason, I cant do rostopic echo /tf and it showing the information, but if I do ssh to the robot it does. That might have to do with the robot not doing what this code is supposed to make him do.
 If you enter the robot, using ssh, it doesnt have rosdep.
+
+
+# New controller:
+
+Follow the instructions from the email that Virgilio sent you, then, in the dockerfile, change line 64 to: RUN wget https://raw.githubusercontent.com/DarK404/ros1_bridge/refs/heads/dedicated_bridges_lifecycle/ros2_foxy.repos
+This is because the github that is indicated searches for a branch of the FastDDS repository called: 2.1.x, which doesnt exist anymore. The 2.1.4 version does exist tho, so changing the following in ros1_bridge/ros2_foxy.repos:  
+
+eProsima/Fast-DDS:
+    type: git
+    url: https://github.com/eProsima/Fast-DDS.git
+    version: 2.1.x  //to: version: 2.1.4 will fix the error
