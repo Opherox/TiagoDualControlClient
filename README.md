@@ -28,6 +28,8 @@ If you enter the robot, using ssh, it doesnt have rosdep.
 
 
 # New controller:
+[docker_tiago.zip](https://github.com/user-attachments/files/17681350/docker_tiago.zip)
+
 
 Follow the instructions from the email that Virgilio sent you, then, in the dockerfile, change line 64 to: RUN wget https://raw.githubusercontent.com/DarK404/ros1_bridge/refs/heads/dedicated_bridges_lifecycle/ros2_foxy.repos
 This is because the github that is indicated searches for a branch of the FastDDS repository called: 2.1.x, which doesnt exist anymore. The 2.1.4 version does exist tho, so changing the following in ros1_bridge/ros2_foxy.repos:  
